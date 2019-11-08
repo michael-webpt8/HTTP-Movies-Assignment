@@ -1,6 +1,6 @@
-import React from "react";
-import axios from "axios";
-import MovieCard from "./MovieCard";
+import React from 'react';
+import axios from 'axios';
+import MovieCard from './MovieCard';
 export default class Movie extends React.Component {
   constructor(props) {
     super(props);
@@ -37,9 +37,9 @@ export default class Movie extends React.Component {
     }
 
     return (
-      <div className="save-wrapper">
-        <MovieCard movie={this.state.movie} />
-        <div className="save-button" onClick={this.saveMovie}>
+      <div className='save-wrapper'>
+        <MovieCard {...this.props} movie={this.state.movie} />
+        <div className='save-button' onClick={this.saveMovie}>
           Save
         </div>
       </div>
